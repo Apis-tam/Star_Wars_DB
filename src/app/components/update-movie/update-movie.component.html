@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>
+    <span *ngIf="data.id">Edit </span>
+    <span *ngIf="!data.id">Add New</span>
+    Movie
+</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Title:</mat-label>
+        <input
+            matInput
+            name="name"
+            [(ngModel)]="data.name"
+            value="{{ data.name }}"
+        />
+    </mat-form-field>
+</div>
+<code *ngIf="isCodeShown">{{ codeData }}</code>
+<div mat-dialog-actions>
+    <button mat-raised-button (click)="onClose()" color="warn">
+        Cancel
+    </button>
+    <button mat-raised-button [mat-dialog-close]="data" color="primary">
+        Save
+    </button>
+    <button mat-button (click)="isCodeShown = !isCodeShown">Show</button>
+</div>

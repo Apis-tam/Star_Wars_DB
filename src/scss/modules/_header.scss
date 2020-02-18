@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    height: 70%;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    &__item {
+        margin: 0 5px;
+    }
+    &__item {
+        mat-icon {
+            margin-right: 5px;
+        }
+    }
+}
